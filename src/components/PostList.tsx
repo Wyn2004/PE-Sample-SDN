@@ -5,15 +5,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PostCard } from "./PostCard";
-
-interface Post {
-  _id: string;
-  name: string;
-  description: string;
-  image?: string;
-  createdAt: string;
-}
-
+import { Post } from "@/interface/post.interface";
 export function PostList() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
