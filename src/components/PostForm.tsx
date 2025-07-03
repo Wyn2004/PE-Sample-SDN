@@ -10,9 +10,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Upload, X, Loader2 } from "lucide-react";
-import Image from "next/image";
 import { PostFormData, postSchema } from "@/lib/validations/post.validation";
 import { toast } from "sonner";
+import Image from "next/image";
 
 interface PostFormProps {
   initialData?: {
