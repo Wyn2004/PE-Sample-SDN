@@ -1,7 +1,4 @@
-// import { CreatePostDialog } from "@/components/create-post-dialog";
-import { CreatePostDialog } from "@/components";
-import { PostList } from "@/components/PostList";
-import { SearchAndSort } from "@/components/SearchAndSort";
+import { CreatePostDialog, PostList, SearchAndSort } from "@/components";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 
