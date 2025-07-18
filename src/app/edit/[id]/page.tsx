@@ -4,12 +4,14 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 interface EditPostPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function EditPostPage({ params }: EditPostPageProps) {
+export default async function EditPostPage({ params }: EditPostPageProps) {
+  const { id } = await params;
+  
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center gap-4 mb-8">
@@ -22,7 +24,7 @@ export default function EditPostPage({ params }: EditPostPageProps) {
         <h1 className="text-3xl font-bold">Edit Post</h1>
       </div>
 
-      <EditPostForm postId={params.id} />
+      <EditPostForm postId={id} />
     </div>
   );
 }
